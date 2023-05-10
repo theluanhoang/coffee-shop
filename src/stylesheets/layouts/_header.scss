@@ -1,0 +1,83 @@
+@use "../abstracts/" as *;
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 35px;
+    padding-bottom: 35px;
+    @include sm() {
+        padding-top: 25px;
+        padding-bottom: 25px;
+    }
+    &-logo {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        @include sm() {
+            gap: 10px;
+        }
+        &__image {
+            width: 93px;
+            object-fit: cover;
+            @include sm() {
+                width: 80px;
+            }
+            @include xsm() {
+                width: 70px;
+            }
+        }
+        &__name {
+            color: #311c10;
+            font-size: 32px;
+            @include sm() {
+                font-size: 24px;
+            }
+            @include xsm() {
+                font-size: 22px;
+            }
+        }
+    }
+
+    &-menu {
+        display: flex;
+        height: 60px;
+        align-items: center;
+        background-color: #f1dec9;
+        @include lg() {
+            display: none;
+        }
+        &__item {
+            display: flex;
+            align-items: center;
+            padding: 0 20px;
+            height: 100%;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            a {
+                color: #311c10;
+                font-size: 18px;
+            }
+            &:hover {
+                transition: all 0.3s ease-in-out;
+                background-color: #311c10;
+                a {
+                    color: #fff;
+                }
+            }
+        }
+    }
+    &-function {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @include lg() {
+            display: none;
+        }
+    }
+    &-bars {
+        display: none;
+        @include lg() {
+            display: block;
+        }
+    }
+}

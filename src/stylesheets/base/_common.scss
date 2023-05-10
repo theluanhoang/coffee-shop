@@ -1,0 +1,28 @@
+@use "../abstracts/" as *;
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.title {
+    font-size: 42px;
+    font-weight: bold;
+    color: #311c10;
+    text-transform: uppercase;
+    @include sm() {
+        font-size: 32px;
+    }
+}
+
+.sub-title {
+    font-size: 24px;
+    font-weight: normal;
+    color: #8d7b68;
+    max-width: 640px;
+    margin: 10px auto;
+    line-height: 32px;
+    @include sm() {
+        font-size: 18px;
+    }
+}

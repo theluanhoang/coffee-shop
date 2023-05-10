@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "parcel src/pages/index.html",
+    "build": "parcel build src/pages/index.html"
+  },
+  "dependencies": {
+    "@parcel/transformer-sass": "^2.8.3",
+    "aos": "^2.3.4",
+    "parcel": "^2.8.3",
+    "posthtml-doctype": "^1.1.1",
+    "posthtml-include": "^1.7.4",
+    "sass": "^1.62.1"
+  }
+}

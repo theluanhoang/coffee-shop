@@ -1,0 +1,95 @@
+@use "../abstracts/" as *;
+.hero-section {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    &-content {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        @include sm() {
+            gap: 15px;
+        }
+        @media (max-width: 1142px) {
+            margin-top: 50px;
+            align-items: center;
+            text-align: center;
+        }
+        @include sm() {
+            margin-top: 20px;
+        }
+        &__title {
+            font-weight: bold;
+            font-size: 55px;
+            color: #311c10;
+            @include sm() {
+                font-size: 36px;
+            }
+        }
+
+        &__description {
+            font-size: 42px;
+            color: #8d7b68;
+            font-weight: 100;
+            @include sm() {
+                font-size: 32px;
+            }
+        }
+
+        &__text {
+            font-size: 24px;
+            color: #a4907c;
+            line-height: 38px;
+            @include sm() {
+                font-size: 18px;
+                line-height: 30px;
+            }
+        }
+        &__btn {
+            width: 182px;
+            height: 67px;
+            border-radius: 4px;
+            background-color: #8d7b68;
+            outline: none;
+            border: none;
+            font-size: 24px;
+            color: #fff;
+            font-weight: normal;
+            cursor: pointer;
+            transition: all 0.1s ease-in-out;
+            margin-top: 20px;
+            &:hover {
+                opacity: 0.9;
+                transition: all 0.1s ease-in-out;
+            }
+        }
+    }
+    &-media {
+        position: relative;
+        display: block;
+        margin-top: 20px;
+        @media (max-width: 1142px) {
+            display: none;
+        }
+        &__circle {
+            width: 600px;
+            height: 600px;
+            border-radius: 100rem;
+            background-color: #8d7b68;
+            @include center();
+            .media-circle__image {
+                width: 500px;
+                height: 500px;
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+            .media-circle__sale {
+                position: absolute;
+                top: -80px;
+                left: -100px;
+            }
+        }
+    }
+}
